@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>About</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Jolly Games Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />	
+<script src="js/jquery-1.11.1.min.js"></script>
+<!--webfonts-->
+<link href='http://fonts.useso.com/css?family=Fugaz+One|Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<!--//webfonts-->
+</head>
+<body>
+	<!--start-home-->
+	<div id="home" class="header">
+		<div class="header-top">
+			<div class="container">
+			<div class="head-nav">
+				<div class="logo">
+					<a href="index.html"><h1>学习<span>日记</span></h1></a>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<div class="clearfix"></div>
+				<span class="menu"></span>
+				<div class="top-menu">
+					<ul>
+					<li class="active"><a class="color1" href="index.html"  >主页</a></li>
+						<li><a class="color2" href="about.html">拓展</a></li>
+						
+						<li><a class="color5" href="gallery.html">联盟</a></li>
+					
+						<div class="clearfix"> </div>
+					</ul>
+				</div>
+				<!--script-for-menu-->
+				<script>
+				$( "span.menu" ).click(function() {
+				  $( ".top-menu" ).slideToggle( "slow", function() {
+				    // Animation complete.
+				  });
+				});
+			</script>
+			<!--script-for-menu-->
+			</div>
+		  </div>
+		</div> 
+		<!-- banner-bottom -->
+		<div class="banner two">
+		</div>
+	</div>
+	
+	
+	<!--start-featured-->
+		
+								<div class="test-main"><div class="featured-post">
+			<div class="container">
+			  <h3>前方高能</h3>
+				  <div class="test-text">
+					<div id="top" class="callbacks_container">
+						<ul class="rslides" id="slider4">
+							<li>
+								<div class="test-main">
+								
+									<img src="images/test2.jpg" alt="" />
+									<h6>PDD</h6>
+								</div>
+							</li>
+							<li>
+								<div class="test-main">
+							
+									<img src="images/test1.jpg" alt="" />
+									<h6>丑开</h6>
+								</div>
+							</li>
+							<li>
+								
+									<img src="images/test3.jpg" alt="" />
+									<h6>骚猪</h6>
+								</div>
+							</li>
+					 	</ul>
+					</div>
+				<div class="clearfix"> </div>	
+			</div>
+		</div>
+	</div>
+	 <!--Slider-Starts-Here-->
+				<script src="js/responsiveslides.min.js"></script>
+			 <script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 4
+			      $("#slider4").responsiveSlides({
+			        auto: true,
+			        pager:false,
+			        nav: true,
+			        speed: 500,
+			        namespace: "callbacks",
+			        before: function () {
+			          $('.events').append("<li>before event fired.</li>");
+			        },
+			        after: function () {
+			          $('.events').append("<li>after event fired.</li>");
+			        }
+			      });
+			
+			    });
+			  </script>
+			<!--End-slider-script--> 
+	
+		<!--start-new-trailers-->
+		<div class="new-trailers two">
+	    <div class="container">
+				<h3>高能预警下拉慎点</h3>
+			 <div class="trailer-top">
+				<div class="col-md-7 trailer">
+					 <iframe src="http://www.bilibili.com/video/av4606803/" frameborder="0" allowfullscreen></iframe>
+				</div>
+					<div class="col-md-5 trailer-text">
+				   <div class="sub-trailer">
+				       <div class="col-md-4 sub-img">
+							<img src="images/v2.jpg" alt="img07"/>
+					  </div>
+					 
+					    <div class="clearfix"> </div>
+				   </div>
+				    <div class="sub-trailer">
+				       <div class="col-md-4 sub-img">
+							<img src="images/v1.jpg" alt="img07"/>
+					   </div>
+					
+					    <div class="clearfix"> </div>
+				   </div>
+				    <div class="sub-trailer">
+				       <div class="col-md-4 sub-img">
+							<img src="images/v3.jpg" alt="img07"/>
+					   </div>
+					
+					    <div class="clearfix"> </div>
+				   </div>
+				</div>
+				 <div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	
+
+							<!--start-smoth-scrolling-->
+						<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+</body>
+</html>
