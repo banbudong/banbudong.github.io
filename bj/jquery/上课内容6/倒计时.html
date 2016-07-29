@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	    <span id="days"></span>日
+        <span id="hours"></span>:
+        <span id="minutes"></span>: 
+        <span id="seconds"></span>
+     <script src="script/jquery.js"></script>  
+	<script>
+	
+    function getResult(){
+         var strTime="2016-7-20 09:21:00";
+         var timeTarget=new Date(strTime);
+         var target=timeTarget.getTime();
+         var timeNow=new Date();
+         var time=timeNow.getTime();
+        var result=target-time;
+        var leftsecond=result/1000
+    	var d=Math.floor(leftsecond/(60*60*24))           
+    	var h=Math.floor((leftsecond-d*24*3600)/3600)         
+    	var m=Math.floor((leftsecond-d*24*60*60-h*3600)/60); 
+        var s=Math.floor(leftsecond-d*24*60*60-h*3600-m*60); 
+        $("#days").text(d)
+    	$("#hours").text(h)
+    	$("#minutes").text(m)
+    	$("#seconds").text(s)
+    	if(d==0 &&h==0 &&m==0 &&s==0){
+    		clearInterval(a)
+    	}
+    }
+        getResult();
+        setInterval(getResult,1000)
+	</script>
+	
+</body>
+</html>

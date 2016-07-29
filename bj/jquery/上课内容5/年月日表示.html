@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+        .red{
+          color:red;
+        }
+    
+  
+
+  </style>
+</head>
+<body>
+ <form action="">
+     <input type="text" id="date">
+      <p id="info"></p>
+    
+      </form>
+  <script src="script/jquery.js"></script>
+	<script>
+         var re=/^([0-9]{4})\-([0-9]{2})\-([0-9]{2})$/;
+         $("#date").blur(function(){
+          var value=$(this).val();
+          var result=re.exec(value);
+          $("#info").html(getDate(result));
+      })
+         function  getDate(result){
+         	if(result==null) {
+         		var content="<span class='red'>请输入正确的格式</span>"
+         		return content
+         	}else{
+         		var content="<span>日期为" +
+            result[1]+
+            "年，"+
+            result[2]+
+            "月，"+
+            result[3]+
+            "日. </span> "
+         		return content
+         		
+         	}
+         }
+
+     
+         
+          
+	</script>
+
+
+	
+</body>
+</html>

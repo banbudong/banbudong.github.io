@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="txt">
+	<input type="button" id="btn" value="猜数字">
+	<script src="script/jquery.js"></script>
+	<script>
+            var num=Math.floor(Math.random()*10);
+            
+            $("#btn").click(function(){
+            var target=$("#txt").val();
+            if (target<num){
+           
+            alert( "比正确结果小")}
+              else if (target>num){
+            
+            alert("比正确结果大") }
+            else if( target=num){
+            
+            alert("恭喜你猜对了")
+            num=Math.floor(Math.random()*10);
+        }
+
+        })
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="txt">
+	<input type="button" id="btn" value="获取属性">
+	<script>
+		var oTxt = document.querySelector("#txt");
+		var oBtn = document.querySelector("#btn");
+		oBtn.onclick = function(){
+			oTxt.value = "hello world";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	li{
+		width: 20px;
+		height: 20px;
+	    list-style: none;
+		float: left;
+	}
+	</style>
+
+</head>
+<body>
+	<img src="images/0.jpg" alt="" id="pic">
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script src="script/jquery.js"></script>
+	<script>
+       var n=0;
+       var  src="images/"+n+".jpg"
+       function fun(){
+       	n++
+      
+       
+       	if(n==5){
+            	var n=0;
+            	n++
+       	}
+       } 
+       fun()
+       setInterval(fun,1000)
+                   
+    </script>
+
+</body>
+</html>

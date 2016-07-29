@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+            //var re=/[0-9]/; 
+          // var re=/1/;
+          // var str="1";
+          //var re=/[0-9]+/;
+         // var str="123"
+         var re=/^[0-9]{6,11}$/;
+         var str="12345678912"
+           //var result=re.test(str);
+            var result=re.exec(str);
+           console.log(result); 
+	</script>
+
+</body>
+</html>

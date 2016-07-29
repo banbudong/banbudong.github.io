@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.active{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		<span id="days"></span>日
+		<span id="hours"></span>:
+		<span id="minutes"></span>:
+		<span id="seconds"></span>
+	</p>
+	<button>开始购买</button>
+	<script src="script/jquery.js"></script>
+	<script>
+		var strTarget = "2016-7-20 10:51:50";
+		var timeTarget = new Date(strTarget).getTime();
+
+		function setTime(){
+			var timeNow = new Date().getTime();
+			var	result = timeTarget - timeNow;
+			var days = Math.floor(result / (24 * 60 * 60 * 1000));
+			var other1 = result % (24 * 60 * 60 * 1000);
+			var hours = Math.floor(other1 / (60 * 60 * 1000));
+			var other2 = other1 % (60 * 60 * 1000);
+			var minutes = Math.floor(other2 / (60 * 1000));
+			var other3 = other2 % (60 * 1000);
+			var seconds = Math.floor(other3 / 1000);
+			$("#days").text(days);
+			$("#hours").text(hours);
+			$("#minutes").text(minutes);
+			$("#seconds").text(seconds);
+			console.log(result);
+			if(days==0&&hours==0&&minutes==0&&seconds==0){
+				$("button").addClass("active");
+				clearInterval(t);
+			}
+		}
+		setTime();
+		var t =setInterval(setTime,1000);
+
+
+
+	</script>
+</body>
+</html>

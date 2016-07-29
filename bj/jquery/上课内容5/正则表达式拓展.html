@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <style>
+        .red{
+          color:red;
+        }
+        .green{
+          color:green;
+        }
+
+  </style>
+</head>
+<body>
+ <form action="">
+      <label for="">电话</label>
+      <input type="text" id="num">
+      <span id="info"></span>
+      </form>
+  <script src="script/jquery.js"></script>
+	<script>
+         var re=/^[0-9]{11}$/
+         $("#num").blur(function(){
+          var value=$(this).val();
+          var result=re.test(value);
+          if(result){
+               $("#info").text("成功").removeClass("red").addClass("green");
+          }else{
+                $("#info").text("失败").removeClass("green").addClass("red");
+          }
+
+         })        
+         // var str="";
+        // if ( re=/^[0-9]{6,11}$/)
+        // { 
+        //  var result=re.exec(str);
+           //console.log(result); 
+       //}
+       // else{
+        //  var result="错误";
+         //  console.log(result); 
+       // }
+         
+          
+	</script>
+
+</body>
+</html>
