@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>按名字排序</button>
+	<button>按年龄排序</button>
+    <script>
+        var stulist=[
+                 {
+                  name:"小明",
+                   age:2,
+                   cj:3
+                 },
+                   {
+                  name:"小的",
+                   age:3,
+                   cj:4
+                 },
+                   {
+                  name:"小飞",
+                   age:4,
+                   cj:5
+                 }, 
+                  {
+                  name:"小看",
+                   age:5,
+                   cj:6
+                 },
+			];
+		function bubbleSort(stulist,member){
+			var len=stulist.length
+			for(var i=len;i>=2;i--){
+			 for(var j=0;j<i-1;j++){
+			 	if(stulist[j][member]>stulist[j+1][member]){
+			 		var temp=stulist[j]
+			 		stulist[j]=stulist[j+1]
+			 		stulist[j+1]=temp
+			 	}
+			 }
+			}
+		}
+		function cjSort(stulist){
+			bubbleSort(stulist,"cj")
+		}
+			function ageSort(stulist){
+			bubbleSort(stulist,"age")
+		}
+		ageSort(stulist);
+		console.log(stulist)
+
+
+
+	</script>
+	
+</body>
+</html>

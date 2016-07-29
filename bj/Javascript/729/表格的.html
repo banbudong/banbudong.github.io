@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body> 
+		<table class="table table-bordered table-hover">
+			<thead>
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>成绩</th>
+			</thead>
+
+			<tbody></tbody>
+		
+		</table> 
+	<script src="script/jquery.js"></script>
+	<script>
+        var stulist=[
+                 {
+                  name:"小明",
+                   age:2,
+                   cj:3
+                 },
+                   {
+                  name:"小的",
+                   age:3,
+                   cj:4
+                 },
+                   {
+                  name:"小飞",
+                   age:4,
+                   cj:5
+                 }, 
+                  {
+                  name:"小看",
+                   age:5,
+                   cj:6
+                 },
+			];
+
+			for(var i in stulist){
+				var $tr=$("<tr></tr>");
+				for(var j in stulist[i]){
+					var text=stulist[i][j];
+					var $td=$("<td></td>");
+					$td.text(text);
+					$tr.append($td);
+				}
+				$("table").append($tr);
+			}
+			//function fun(stulist){
+			//$("table tbody").empty();
+			//	for(var i in stulist){
+			//	var $tr=$("<tr></tr>");
+			//	for(var j in stulist[i]){
+			//		var text=stulist[i][j];
+			//		var $td=$("<td></td>");
+				//	$td.text(text);
+				//	$tr.append($td);
+				//}
+				//$("table").append($tr);
+			//}
+			}
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var arr=[1,2,3,3,4,5,6,7]
+		function nor(array){
+			var newArr=[];
+			var obj={};
+			for(var i=0;i<array.length;i++){
+
+
+			if(obj[array[i]]===undefined){
+              obj[array[i]]=1;
+              newArr.push(array[i]);
+			}
+		}
+			return newArr;
+		}
+		var result=nor(arr);
+		console.log(result)
+
+	</script>
+	
+</body>
+</html>

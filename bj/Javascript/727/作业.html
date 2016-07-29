@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+		<button id="btn">抽</button>
+		<script>
+		var personArr=[
+ 				"z",
+ 				"x",
+ 				"c",
+ 				"v",
+ 				"b",
+ 				];
+ 		var arr=[];		
+ 		function s(){
+ 			var n=Math.floor(Math.random()*personArr.length);
+ 			var person=personArr[n]
+ 			if(arr.length===0){
+ 				console.log(person)
+ 				arr.push(person)
+ 			}else if(arr.length<personArr.length){
+ 				for (var i=0;i<arr.length;i++){
+ 					if(arr[i]===person){
+ 						s()
+ 						return
+ 					}
+ 				}
+ 				console.log(person)
+ 				arr.push(person)
+ 			}
+ 		}
+ 		var oBtn=document.querySelector("#btn")
+		oBtn.onclick=s;
+ 		</script>		
+	
+</body>
+</html>

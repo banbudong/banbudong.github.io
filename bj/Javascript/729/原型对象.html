@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+			function Cat(name,age){
+			this.name=name;
+			this.age=age
+					}
+		    Cat.prototype.sayName=function(){
+		    	console.log("mm")
+		    }
+		    function whiteCat(){}
+		    whiteCat.prototype=new Cat();
+		    whiteCat.prototype.color="white"
+		    whiteCat.prototype.showColor=function(){
+		    	console.log("white")
+		    };
+		    var whiteCat=new whiteCat();
+		    whiteCat.sayName();
+
+	</script>
+</body>
+</html>
